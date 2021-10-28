@@ -15,7 +15,7 @@
     --medium-blue: #1C7FA6;
     --light-blue: #EDF1FA;
     --dark-orange: #e65704;
-    --soft-pink: #E8D5D1;
+    --soft-pink: #ebbcb3;
     --pink: #eb46c2;
     --red: #e20404;
     --purple: #593d8a;
@@ -107,6 +107,8 @@ h3 {
     transform: translateY(-5rem);
 }
 
+
+
 .subtitles {
     font-weight: bold;
     text-align: center;
@@ -119,7 +121,9 @@ h3 {
 .paragraphs {
     color: var(--dark-purple);
     padding: 0.5rem 2.5rem 1.5rem 2.5rem;
-    font-size: clamp(1.1rem, 2vw, 2.2rem);
+    font-size: clamp(1.1rem, 2vw, 2rem);
+    line-height: 25px;
+
 }
 
 /* .......................SKILLS.................*/
@@ -205,21 +209,21 @@ h3 {
 
 .soft-skill {
     justify-self: center;
-    font-size: 1.2rem;
+    font-size: clamp(1.1rem, 2vw, 2rem);
     color: var(--dark-purple);
-    transition: transform 0.2s;
+    transition: transform 0.3s;
 }
 
 .soft-skill:hover {
     transform: scale(1.1);
-    text-shadow: 0 0 2px var(--purple);
+    text-shadow: 0 1px 2px var(--purple);
 }
 
 .hard-skill {
     justify-self: center;
     font-weight: bold;
-    font-size: 1.5rem;
-    transition: transform 0.2s;
+    font-size: clamp(1.4rem, 2vw, 2.2rem);
+    transition: transform 0.3s;
 }
 
 .hard-skill:hover {
@@ -227,9 +231,13 @@ h3 {
     text-shadow: 0 0 2px;
 }
 
+x
 /*..........................MY PROJECTS...............................*/
 
 .projects-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -238,25 +246,34 @@ h3 {
 }
 
 .images-content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     width: 80vw;
-    margin: 2rem 0;
+    margin: 5rem 0;
+}
+
+.project-images:hover {
+    transform: rotateY(360deg);
+    transition: transform 4s;
 }
 
 h4 {
     color: var(--dark-blue2);
-    font-size: 1.3rem;
+    font-size: clamp(1.3rem, 2vw, 1.5rem);
     text-shadow: 1px 1px 2px var(--purple);
-
 }
 
 .images-info p {
     color: var(--dark-purple);
     font-size: clamp(1rem, 2vw, 2rem);
+    line-height: 25px;
+
 }
 
 .project-images {
@@ -275,6 +292,9 @@ footer {
     width: 100%;
     padding: 0.7rem 0;
     background-color: var(--dark-blue);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -284,7 +304,7 @@ footer {
 a {
     font-family: "Quicksand", sans-serif;
     text-decoration: none;
-    color:var(--light-blue);
+    color: var(--light-blue);
     font-size: 1rem;
     transition: transform 0.2s;
 }
@@ -295,6 +315,9 @@ a:hover, a:active {
 }
 
 .contact {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     margin-bottom: 1rem;
     align-items: center;
@@ -347,11 +370,9 @@ a:hover, a:active {
     .images-content {
         flex-direction: row;
     }
-
     h4 {
-        font-size: 1.5rem;
+        font-size: clamp(1.5rem, 2vw, 1.8rem);
     }
-    
     .images-info p {
         font-size: clamp(1.1rem, 1.5vw, 2rem);
     }
@@ -364,8 +385,13 @@ a:hover, a:active {
     .subtitle {
         font-size: clamp(1rem, 7vw, 3rem);
     }
-   
+
+    /*.................................ABOUT SECTION.........*/
+
     .about-section {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -379,20 +405,32 @@ a:hover, a:active {
     }
     .about-content {
         width: clamp(7rem, 50vw, 60rem);
+        margin-left: 5rem;
+        margin-top: 4rem;
     }
     .subtitles {
         font-size: clamp(2rem, 3vw, 4rem);
     }
     .paragraphs {
-        font-size: clamp(1.2rem, 1.5vw, 2rem);
+        font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+        line-height: 35px;
+
     }
+
+    /*.........................SKILLS SECTION................*/
+
     .skills-section {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
         display: flex;
         justify-content: space-around;
         align-items: center;
     }
     .skills-content {
-        width: clamp(30rem, 40vw, 50rem);
+        width: clamp(30rem, 50vw, 50rem);
+        padding-left: 2rem;
+
     }
     .grid-container {
         grid-template-columns: repeat(7, 1fr);
@@ -403,37 +441,51 @@ a:hover, a:active {
         width: clamp(39rem, 40vw, 60rem);
     }
     .hard-skill {
-        font-size: 1.8rem;
+        font-size: clamp(1.5rem, 2vw, 2rem);
     }
     .soft-skill {
-        font-size: 1.4rem;
+        font-size: clamp(1.2rem, 1.5vw, 1.5rem);
     }
+
+    /*............................PROJECTS SECTION.............*/
+
     .projects-section {
-        margin: 5rem auto;
+        margin: 7rem auto;
     }
     .projects-container {
         flex-direction: column;
     }
     .images-content {
         flex-direction: row;
+        justify-content: space-around;
         width: 80vw;
     }
     .project-images {
         margin: 2rem 3rem;
-        width: 25vw;
+        width: clamp(20rem, 25vw, 25rem);
     }
 
-    h4 {
-        font-size: 2rem;
+    .project-images:hover {
+        transform: rotateY(360deg);
+        transition: transform 3s;
     }
     
+    h4 {
+        font-size: clamp(1.5rem, 2vw, 2rem);
+
+    }
     .images-info {
         margin: 0 3rem;
-        width: 60vw;
+        width: clamp(20rem, 60vw, 40rem);
     }
     .images-info p {
-        font-size: 1.5rem;
+        font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+        line-height: 35px;
+
     }
+
+    /*..............................FOOTER.....................*/
+
     footer {
         flex-direction: row;
         justify-content: space-around;
@@ -448,7 +500,7 @@ a:hover, a:active {
 }
 
 @media (min-width: 1400) {
-    .background {
+  .header-background {
         height: 45vh;
     }
 }
