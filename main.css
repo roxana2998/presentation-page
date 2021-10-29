@@ -102,11 +102,10 @@ h3 {
 }
 
 .about-content {
-    width: clamp(10rem, 80vw, 60rem);
+    width: clamp(10rem, 90vw, 60rem);
     text-align: center;
     transform: translateY(-5rem);
 }
-
 
 
 .subtitles {
@@ -120,7 +119,7 @@ h3 {
 
 .paragraphs {
     color: var(--dark-purple);
-    padding: 0.5rem 2.5rem 1.5rem 2.5rem;
+    padding: 0.5rem 2rem 1.5rem 2rem;
     font-size: clamp(1.1rem, 2vw, 2rem);
     line-height: 25px;
 
@@ -129,7 +128,7 @@ h3 {
 /* .......................SKILLS.................*/
 
 .skills-content {
-    width: clamp(10rem, 80vw, 60rem);
+    width: clamp(10rem, 90vw, 60rem);
     text-align: center;
     margin: 0 auto;
 }
@@ -211,19 +210,19 @@ h3 {
     justify-self: center;
     font-size: clamp(1.1rem, 2vw, 2rem);
     color: var(--dark-purple);
-    transition: transform 0.3s;
+    transition: transform 0.2s;
 }
 
 .soft-skill:hover {
     transform: scale(1.1);
-    text-shadow: 0 1px 2px var(--purple);
+    text-shadow: 0 0 2px var(--purple);
 }
 
 .hard-skill {
     justify-self: center;
     font-weight: bold;
     font-size: clamp(1.4rem, 2vw, 2.2rem);
-    transition: transform 0.3s;
+    transition: transform 0.2s;
 }
 
 .hard-skill:hover {
@@ -258,10 +257,14 @@ x
     margin: 5rem 0;
 }
 
+
+
 .project-images:hover {
     transform: rotateY(360deg);
-    transition: transform 4s;
+    transition: transform 2.5s;
 }
+
+
 
 h4 {
     color: var(--dark-blue2);
@@ -367,6 +370,10 @@ a:hover, a:active {
 }
 
 @media (min-width: 850px) {
+    .paragraphs {
+        line-height: 35px;
+
+    }
     .images-content {
         flex-direction: row;
     }
@@ -374,7 +381,7 @@ a:hover, a:active {
         font-size: clamp(1.5rem, 2vw, 1.8rem);
     }
     .images-info p {
-        font-size: clamp(1.1rem, 1.5vw, 2rem);
+        font-size: 1.2rem;
     }
 }
 
@@ -396,6 +403,7 @@ a:hover, a:active {
         justify-content: space-around;
         align-items: center;
         margin-top: 5rem;
+        width: 100%;;
     }
     .image-box {
         border-radius: 5px;
@@ -403,10 +411,35 @@ a:hover, a:active {
         box-shadow: 0 5px 15px #858383;
         transform: translateY(0);
     }
+
+    .image-box:hover {
+        transform-origin: 50% 0;
+        animation: swinging 4s infinite;
+
+    }
+
+    @keyframes swinging {
+        0% {
+          transform: rotate(0);
+        }
+        25% {
+            transform: rotate(-5deg);
+        }
+        50% {
+          transform: rotate(5deg);
+        }
+        75% {
+          transform: rotate(-5deg);
+        }
+        100% {
+            transform: rotate(0);
+        }
+      }
+
     .about-content {
-        width: clamp(7rem, 50vw, 60rem);
-        margin-left: 5rem;
+        width: clamp(30rem, 50vw, 60rem);
         margin-top: 4rem;
+        margin-right: 3rem;
     }
     .subtitles {
         font-size: clamp(2rem, 3vw, 4rem);
@@ -424,12 +457,12 @@ a:hover, a:active {
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
+        width: 100%;
     }
     .skills-content {
-        width: clamp(30rem, 50vw, 50rem);
-        padding-left: 2rem;
+        width: clamp(30rem, 50vw, 55rem);
 
     }
     .grid-container {
@@ -438,7 +471,7 @@ a:hover, a:active {
         margin: 0 auto;
         padding-top: 3rem;
         row-gap: clamp(0, 0.1vw, 1rem);
-        width: clamp(39rem, 40vw, 60rem);
+        width: clamp(39rem, 45vw, 60rem);
     }
     .hard-skill {
         font-size: clamp(1.5rem, 2vw, 2rem);
@@ -465,10 +498,7 @@ a:hover, a:active {
         width: clamp(20rem, 25vw, 25rem);
     }
 
-    .project-images:hover {
-        transform: rotateY(360deg);
-        transition: transform 3s;
-    }
+    
     
     h4 {
         font-size: clamp(1.5rem, 2vw, 2rem);
@@ -476,11 +506,13 @@ a:hover, a:active {
     }
     .images-info {
         margin: 0 3rem;
-        width: clamp(20rem, 60vw, 40rem);
+        width: clamp(20rem, 60vw, 50rem);
     }
     .images-info p {
         font-size: clamp(1.2rem, 1.5vw, 1.5rem);
         line-height: 35px;
+
+       
 
     }
 
@@ -492,7 +524,7 @@ a:hover, a:active {
         padding: clamp(0.5rem, 1.5vw, 1rem);
     }
     a {
-        font-size: 1.2rem;
+        font-size: clamp(1rem, 1.5vw, 1.2rem);
     }
     .contact {
         margin: 0;
